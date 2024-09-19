@@ -1,0 +1,67 @@
+import { OrderType, TransactionType } from './simple-match.validator'
+
+export const orders: OrderType[] = [
+  {
+    type: 'order',
+    customerName: 'Alex Abe',
+    orderId: '1',
+    date: '2023-07-11',
+    product: 'Product A',
+    price: 1.23,
+  },
+  {
+    type: 'order',
+    customerName: 'Brian Ben',
+    orderId: '2',
+    date: '2023-08-08',
+    product: 'Product B',
+    price: 3.21,
+  },
+]
+
+export const transactions: TransactionType[] = [
+  {
+    type: 'txn',
+    customerName: 'Alex Abe',
+    orderId: '1',
+    date: '2023-07-11',
+    product: 'Product A',
+    price: 1.23,
+    transactionType: 'paymentReceived',
+    transactionDate: '2023-07-12',
+    transactionAmount: 1.23,
+  },
+  {
+    type: 'txn',
+    customerName: 'Alex Abe',
+    orderId: '1',
+    date: '2023-07-11',
+    product: 'Product A',
+    price: 1.23,
+    transactionType: 'refundIssued',
+    transactionDate: '2023-07-13',
+    transactionAmount: -1.23,
+  },
+  {
+    type: 'txn',
+    customerName: 'Brian Ben',
+    orderId: '2',
+    date: '2023-08-08',
+    product: 'Product B',
+    price: 3.21,
+    transactionType: 'payment-1',
+    transactionDate: '2023-08-11',
+    transactionAmount: 1.21,
+  },
+  {
+    type: 'txn',
+    customerName: 'Brian Ben',
+    orderId: '2',
+    date: '2023-08-08',
+    product: 'Product B',
+    price: 3.21,
+    transactionType: 'payment-2',
+    transactionDate: '2023-08-13',
+    transactionAmount: 2.0,
+  },
+]
