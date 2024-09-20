@@ -11,7 +11,7 @@ import { FileFieldsInterceptor } from '@nestjs/platform-express'
 import fs from 'node:fs'
 import { nanoid } from 'nanoid'
 
-@Controller()
+@Controller('api')
 export class MatchController {
   constructor() {}
 
